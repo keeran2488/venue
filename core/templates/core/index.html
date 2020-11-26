@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+{% block title %}
+    Homepage
+{% endblock title %}
+{% block content %}
+    {% for venue in venues %}
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ venue.name }}</h5>
+                <p class="card-text">{{ venue.details }}</p>
+                <a href="#" class="btn btn-primary">Know more</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock content %}
